@@ -1,0 +1,363 @@
+/* College Event Management - Custom Styles */
+
+:root {
+  --color-primary: #1f3b5c;
+  --color-primary-dark: #14283f;
+  --color-accent: #b08d57;
+  --color-bg: #f6f4ee;
+  --color-card: #ffffff;
+  --color-text: #2b2b2b;
+  --color-muted: #6b6b6b;
+  --color-border: #e2dfd6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.site-navbar {
+  background-color: var(--color-primary);
+  border-bottom: 3px solid var(--color-accent);
+}
+.site-navbar .navbar-brand,
+.site-navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+.site-navbar .nav-link:hover {
+  color: var(--color-accent) !important;
+}
+.site-navbar .navbar-brand {
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+}
+.site-navbar .container {
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.site-navbar .navbar-nav {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.site-navbar .nav-link {
+  padding: 4px 10px;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(
+      rgba(31, 59, 92, 0.85),
+      rgba(31, 59, 92, 0.85)
+    ),
+    #1f3b5c;
+  color: #fff;
+  padding: 70px 0;
+  border-bottom: 4px solid var(--color-accent);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 28px auto;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+.btn-accent {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+.btn-accent:hover {
+  background-color: #95764a;
+  border-color: #95764a;
+  color: #fff;
+}
+.btn-outline-primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-outline-primary:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+/* Section title */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  border-left: 4px solid var(--color-accent);
+  padding-left: 12px;
+}
+.section-subtitle {
+  color: var(--color-muted);
+  margin-bottom: 30px;
+}
+
+/* Event Card */
+.event-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 20px;
+  height: 100%;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.event-card:hover {
+  box-shadow: 0 4px 14px rgba(31, 59, 92, 0.12);
+  transform: translateY(-2px);
+}
+.event-card .event-category {
+  display: inline-block;
+  background-color: #eef1f6;
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.event-card .event-category.workshop { background-color: #e8f1ea; color: #2d6a3e; }
+.event-card .event-category.cultural { background-color: #f5e8ee; color: #8a3a62; }
+.event-card .event-category.sports { background-color: #fdf0e3; color: #a25c1a; }
+.event-card .event-category.seminar { background-color: #e6eef7; color: #2a5a8a; }
+.event-card .event-category.competition { background-color: #f7e6e6; color: #8a2a2a; }
+
+.event-card h4 {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.event-meta {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-bottom: 4px;
+}
+.event-meta strong {
+  color: var(--color-text);
+}
+.event-description {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+/* Category Pills */
+.category-pill {
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+.category-pill:hover {
+  border-color: var(--color-primary);
+}
+.category-pill.active {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+/* Category box on home */
+.category-box {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  padding: 24px 16px;
+  text-align: center;
+  border-radius: 6px;
+  height: 100%;
+}
+.category-box h5 {
+  color: var(--color-primary);
+  margin-top: 10px;
+}
+.category-box p {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+.category-icon {
+  font-size: 1.8rem;
+  color: var(--color-accent);
+}
+
+/* How it works step */
+.step-box {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  padding: 28px 20px;
+  text-align: center;
+  border-radius: 6px;
+  height: 100%;
+}
+.step-number {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.step-box h5 {
+  color: var(--color-primary);
+}
+
+/* Detail page */
+.detail-header {
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-border);
+  padding: 36px 0;
+}
+.detail-header h1 {
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+.info-block {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  padding: 18px 20px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+.info-block .label {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.info-block .value {
+  font-size: 1.05rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Form card */
+.form-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 32px;
+}
+
+/* Success card */
+.success-card {
+  background: #fff;
+  border: 2px solid var(--color-primary);
+  border-radius: 6px;
+  padding: 40px;
+  text-align: center;
+}
+.success-card h2 {
+  color: var(--color-primary);
+}
+.success-icon {
+  font-size: 3rem;
+  color: #2d6a3e;
+  margin-bottom: 16px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-primary-dark);
+  color: #d4d4d4;
+  padding: 26px 0;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.site-footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* My registrations row */
+.registration-row {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  padding: 18px 20px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.registration-row h5 {
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+.badge-registered {
+  background-color: #2d6a3e;
+  color: #fff;
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* About page */
+.about-section {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  padding: 30px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+.about-section h3 {
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+.about-section p {
+  color: var(--color-text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 0;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .form-card {
+    padding: 22px;
+  }
+}
